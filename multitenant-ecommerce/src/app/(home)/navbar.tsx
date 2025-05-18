@@ -59,7 +59,6 @@ export const Navbar = () => {
             poncema4
          </span>
          </Link>
-
          <NavbarSidebar 
          items = {navbarItems}
          open={isSidebarOpen}
