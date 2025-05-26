@@ -1,4 +1,3 @@
-// storage-adapter-import-placeholder
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { payloadCloudPlugin } from '@payloadcms/payload-cloud'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
@@ -7,6 +6,7 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
+// Remove .ts extension from imports
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Categories } from './collections/Categories'
@@ -14,15 +14,15 @@ import { Categories } from './collections/Categories'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
-export default buildConfig({
+const config = buildConfig({
   admin: {
-    user: Users.slug,
+    user: 'users',
     importMap: {
       baseDir: path.resolve(dirname),
     },
   },
   collections: [Users, Media, Categories],
-  editor: lexicalEditor(),
+  editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -33,6 +33,7 @@ export default buildConfig({
   sharp,
   plugins: [
     payloadCloudPlugin(),
-    // storage-adapter-placeholder
   ],
 })
+
+export default config
