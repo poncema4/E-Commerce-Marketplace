@@ -68,7 +68,7 @@ export const SignInView = () => {
                         <div className="flex items-center justify-between mb-8">
                             <Link href="/">
                             <span className={cn("text-2xl font-semibold", poppins.className)}>
-                                poncema4
+                                TenantE
                             </span>
                             </Link>
                             <Button
@@ -83,7 +83,7 @@ export const SignInView = () => {
                             </Button>
                         </div>
                         <h1 className="text-4xl font-medium">
-                            Welcome back to Poncema4.
+                            Welcome back to TenantE.
                         </h1>
                         <FormField
                         name="email"
