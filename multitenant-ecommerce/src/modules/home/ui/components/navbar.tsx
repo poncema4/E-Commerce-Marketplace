@@ -86,7 +86,7 @@ export const Navbar = () => {
                 <div className="hidden lg:flex">
                 <Button 
                 asChild 
-                className="border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none bg-black text-white hover:bg-red-600 hover:text-black transition-colors text-lg">
+                className="border-l border-t-0 border-b-0 border-r-0 px-12 h-full rounded-none bg-black text-white hover:bg-blue-500 hover:text-black transition-colors text-lg">
                 <Link href="/admin">
                     Dashboard
                 </Link>
