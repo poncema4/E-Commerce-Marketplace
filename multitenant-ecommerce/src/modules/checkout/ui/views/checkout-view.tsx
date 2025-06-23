@@ -44,10 +44,10 @@ export const CheckoutView = ({ tenantSlug }: CheckoutViewProps) => {
 
     useEffect(() => {
     if (states.success) {
+        setStates({ success: false, cancel: false });
         clearCart();
         // TODO: Invalidate library
         router.push("/products");
-        setStates({ success: false, cancel: false });
         }
     }, [states.success, clearCart, router, setStates]);
 
