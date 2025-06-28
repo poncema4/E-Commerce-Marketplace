@@ -32,7 +32,7 @@ const config = buildConfig({
     }
   },
   collections: [Users, Media, Categories, Products, Tags, Tenants, Orders, Reviews],
-  editor: lexicalEditor({}),
+  editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
