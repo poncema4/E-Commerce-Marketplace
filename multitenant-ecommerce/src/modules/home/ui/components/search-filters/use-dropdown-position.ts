@@ -11,7 +11,6 @@ export const useDropdownPosition = (
 
         // Calculate initial position
         let left = rect.left + window.scrollX;
-        const top = rect.bottom + window.scrollY;
 
         // Check if dropdown goes off the right edge of the screen
         if (left + dropdownWidth > window.innerWidth) {
